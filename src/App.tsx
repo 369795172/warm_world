@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppStore } from './store/appStore'
 import { configManager } from './config/appConfig'
 import TownView from './components/TownView'
@@ -7,7 +7,8 @@ import GardenScene from './components/GardenScene'
 import ParentMode from './components/ParentMode'
 import InitialSetup from './components/InitialSetup'
 import AudioManager from './components/AudioManager'
-import TimeManager from './components/TimeManager'
+import TimeManagerBackground from './components/TimeManagerBackground'
+import ThirdStageDemo from './components/ThirdStageDemo'
 
 function App() {
   const { 
@@ -18,6 +19,9 @@ function App() {
     startSession,
     endSession 
   } = useAppStore()
+
+  // Add state for third stage demo mode
+  const [showThirdStageDemo, setShowThirdStageDemo] = useState(false)
 
   // Initialize session on app start
   useEffect(() => {
@@ -37,6 +41,11 @@ function App() {
     window.addEventListener('beforeunload', handleBeforeUnload)
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
   }, [gameState.isPlaying])
+
+  // Render third stage demo if enabled
+  if (showThirdStageDemo) {
+    return <ThirdStageDemo onBack={() => setShowThirdStageDemo(false)} />
+  }
 
   // Render initial setup if no child profile
   if (!childProfile.name) {
@@ -68,7 +77,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
       <AudioManager />
-      <TimeManager />
+      <TimeManagerBackground />
       
       {/* Background elements for visual appeal */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -84,7 +93,7 @@ function App() {
 
       {/* Scene navigation for testing - will be hidden in production */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 left-4 z-50 flex gap-2">
+        <div className="fixed bottom-4 left-4 z-50 flex flex-wrap gap-2">
           <button
             onClick={() => setCurrentScene('town')}
             className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -114,6 +123,12 @@ function App() {
             }`}
           >
             花园
+          </button>
+          <button
+            onClick={() => setShowThirdStageDemo(true)}
+            className="px-3 py-2 rounded-lg text-sm font-medium bg-purple-500 text-white hover:bg-purple-600 transition-colors"
+          >
+            第三阶段演示
           </button>
         </div>
       )}
