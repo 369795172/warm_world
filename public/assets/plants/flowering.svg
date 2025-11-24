@@ -1,0 +1,66 @@
+<svg width="40" height="48" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Beautiful flowering plant -->
+  <defs>
+    <linearGradient id="flowerStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#90EE90"/>
+      <stop offset="100%" stop-color="#228B22"/>
+    </linearGradient>
+    <radialGradient id="petalGradient" cx="0.5" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#FFB6C1"/>
+      <stop offset="50%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </radialGradient>
+    <radialGradient id="flowerCenter" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </radialGradient>
+    <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ADFF2F"/>
+      <stop offset="50%" stop-color="#32CD32"/>
+      <stop offset="100%" stop-color="#228B22"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main stem -->
+  <path d="M20 35 Q20 25 20 15" stroke="url(#flowerStem)" stroke-width="3" fill="none"/>
+  
+  <!-- Leaves -->
+  <path d="M20 25 Q15 23 12 25 Q15 27 20 25" fill="url(#leafGradient)"/>
+  <path d="M20 25 Q25 23 28 25 Q25 27 20 25" fill="url(#leafGradient)"/>
+  <path d="M20 20 Q14 18 10 20 Q14 22 20 20" fill="url(#leafGradient)"/>
+  <path d="M20 20 Q26 18 30 20 Q26 22 20 20" fill="url(#leafGradient)"/>
+  
+  <!-- Flower petals (5 petals) -->
+  <!-- Top petal -->
+  <ellipse cx="20" cy="8" rx="4" ry="6" fill="url(#petalGradient)" transform="rotate(0 20 8)"/>
+  <!-- Top-right petal -->
+  <ellipse cx="25" cy="10" rx="4" ry="6" fill="url(#petalGradient)" transform="rotate(72 25 10)"/>
+  <!-- Bottom-right petal -->
+  <ellipse cx="23" cy="15" rx="4" ry="6" fill="url(#petalGradient)" transform="rotate(144 23 15)"/>
+  <!-- Bottom-left petal -->
+  <ellipse cx="17" cy="15" rx="4" ry="6" fill="url(#petalGradient)" transform="rotate(216 17 15)"/>
+  <!-- Top-left petal -->
+  <ellipse cx="15" cy="10" rx="4" ry="6" fill="url(#petalGradient)" transform="rotate(288 15 10)"/>
+  
+  <!-- Flower center -->
+  <circle cx="20" cy="12" r="3" fill="url(#flowerCenter)"/>
+  
+  <!-- Flower center details -->
+  <circle cx="19" cy="11" r="0.5" fill="#FFD700" opacity="0.8"/>
+  <circle cx="21" cy="11" r="0.5" fill="#FFD700" opacity="0.8"/>
+  <circle cx="20" cy="13" r="0.5" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Petal highlights -->
+  <ellipse cx="20" cy="6" rx="2" ry="3" fill="#FFB6C1" opacity="0.4"/>
+  <ellipse cx="24" cy="8" rx="2" ry="3" fill="#FFB6C1" opacity="0.4"/>
+  <ellipse cx="22" cy="13" rx="2" ry="3" fill="#FFB6C1" opacity="0.4"/>
+  
+  <!-- Root system -->
+  <path d="M20 35 Q17 37 15 36" stroke="#8B4513" stroke-width="1" opacity="0.5" fill="none"/>
+  <path d="M20 35 Q23 37 25 36" stroke="#8B4513" stroke-width="1" opacity="0.5" fill="none"/>
+  <path d="M20 35 Q18 39 16 38" stroke="#8B4513" stroke-width="0.8" opacity="0.4" fill="none"/>
+  <path d="M20 35 Q22 39 24 38" stroke="#8B4513" stroke-width="0.8" opacity="0.4" fill="none"/>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="20" cy="36" rx="7" ry="2" fill="#000000" opacity="0.1"/>
+</svg>

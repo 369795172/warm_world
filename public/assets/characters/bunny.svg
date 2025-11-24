@@ -1,0 +1,56 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 小兔兔角色设计 -->
+  <defs>
+    <radialGradient id="bunnyBodyGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </radialGradient>
+    <radialGradient id="bunnyEarGradient" cx="0.3" cy="0.2" r="0.9">
+      <stop offset="0%" stop-color="#ffb3d9"/>
+      <stop offset="100%" stop-color="#ff99cc"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 身体 -->
+  <ellipse cx="32" cy="45" rx="18" ry="15" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  
+  <!-- 头部 -->
+  <circle cx="32" cy="28" r="14" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  
+  <!-- 耳朵 -->
+  <ellipse cx="24" cy="12" rx="5" ry="12" fill="url(#bunnyEarGradient)" stroke="#ff99cc" stroke-width="1" transform="rotate(-15 24 12)"/>
+  <ellipse cx="40" cy="12" rx="5" ry="12" fill="url(#bunnyEarGradient)" stroke="#ff99cc" stroke-width="1" transform="rotate(15 40 12)"/>
+  
+  <!-- 耳朵内部 -->
+  <ellipse cx="24" cy="12" rx="2.5" ry="6" fill="#ffe6f2" transform="rotate(-15 24 12)"/>
+  <ellipse cx="40" cy="12" rx="2.5" ry="6" fill="#ffe6f2" transform="rotate(15 40 12)"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="27" cy="26" r="3" fill="#333333"/>
+  <circle cx="37" cy="26" r="3" fill="#333333"/>
+  <circle cx="28" cy="25" r="1" fill="#ffffff"/>
+  <circle cx="38" cy="25" r="1" fill="#ffffff"/>
+  
+  <!-- 鼻子 -->
+  <ellipse cx="32" cy="31" rx="2" ry="1.5" fill="#ff99cc"/>
+  
+  <!-- 嘴巴 -->
+  <path d="M 32 33 Q 29 36 26 34" stroke="#333333" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 32 33 Q 35 36 38 34" stroke="#333333" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- 腮红 -->
+  <circle cx="20" cy="30" r="3" fill="#ffb3d9" opacity="0.4"/>
+  <circle cx="44" cy="30" r="3" fill="#ffb3d9" opacity="0.4"/>
+  
+  <!-- 前爪 -->
+  <ellipse cx="24" cy="50" rx="4" ry="6" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  <ellipse cx="40" cy="50" rx="4" ry="6" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  
+  <!-- 后爪 -->
+  <ellipse cx="28" cy="58" rx="5" ry="3" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  <ellipse cx="36" cy="58" rx="5" ry="3" fill="url(#bunnyBodyGradient)" stroke="#e6e6e6" stroke-width="1"/>
+  
+  <!-- 尾巴 -->
+  <circle cx="15" cy="42" r="6" fill="#ffffff" stroke="#e6e6e6" stroke-width="1"/>
+  <circle cx="15" cy="42" r="3" fill="#f0f0f0"/>
+</svg>

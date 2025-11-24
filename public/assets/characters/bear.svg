@@ -1,0 +1,54 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 小熊熊角色设计 -->
+  <defs>
+    <radialGradient id="bearBodyGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#d2691e"/>
+      <stop offset="100%" stop-color="#cd853f"/>
+    </radialGradient>
+    <radialGradient id="bearBellyGradient" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#f4a460"/>
+      <stop offset="100%" stop-color="#deb887"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 身体 -->
+  <ellipse cx="32" cy="45" rx="20" ry="16" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  
+  <!-- 肚子 -->
+  <ellipse cx="32" cy="48" rx="12" ry="10" fill="url(#bearBellyGradient)" stroke="none"/>
+  
+  <!-- 头部 -->
+  <circle cx="32" cy="26" r="16" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  
+  <!-- 耳朵 -->
+  <circle cx="18" cy="14" r="8" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  <circle cx="46" cy="14" r="8" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  
+  <!-- 耳朵内部 -->
+  <circle cx="18" cy="14" r="4" fill="#cd853f"/>
+  <circle cx="46" cy="14" r="4" fill="#cd853f"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="26" cy="24" r="3" fill="#333333"/>
+  <circle cx="38" cy="24" r="3" fill="#333333"/>
+  <circle cx="27" cy="23" r="1" fill="#ffffff"/>
+  <circle cx="39" cy="23" r="1" fill="#ffffff"/>
+  
+  <!-- 鼻子 -->
+  <ellipse cx="32" cy="30" rx="3" ry="2" fill="#654321"/>
+  
+  <!-- 嘴巴 -->
+  <path d="M 32 32 Q 28 35 24 33" stroke="#654321" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 32 32 Q 36 35 40 33" stroke="#654321" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- 前爪 -->
+  <ellipse cx="22" cy="52" rx="5" ry="7" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  <ellipse cx="42" cy="52" rx="5" ry="7" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  
+  <!-- 后爪 -->
+  <ellipse cx="26" cy="60" rx="6" ry="4" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  <ellipse cx="38" cy="60" rx="6" ry="4" fill="url(#bearBodyGradient)" stroke="#a0522d" stroke-width="1"/>
+  
+  <!-- 友好微笑 -->
+  <path d="M 28 34 Q 32 38 36 34" stroke="#654321" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.7"/>
+</svg>

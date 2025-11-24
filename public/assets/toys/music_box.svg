@@ -1,0 +1,50 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- 音乐盒设计 -->
+  <defs>
+    <linearGradient id="musicBoxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6d5f7"/>
+      <stop offset="100%" stop-color="#d1b3f0"/>
+    </linearGradient>
+    <linearGradient id="musicBoxTopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e5f5"/>
+      <stop offset="100%" stop-color="#e1bee7"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 盒子主体 -->
+  <rect x="6" y="12" width="20" height="15" rx="2" fill="url(#musicBoxGradient)" stroke="#b39ddb" stroke-width="1"/>
+  
+  <!-- 盒子顶部 -->
+  <rect x="6" y="8" width="20" height="6" rx="2" fill="url(#musicBoxTopGradient)" stroke="#b39ddb" stroke-width="1"/>
+  
+  <!-- 装饰边框 -->
+  <rect x="8" y="14" width="16" height="1" fill="#b39ddb" opacity="0.5"/>
+  <rect x="8" y="17" width="16" height="1" fill="#b39ddb" opacity="0.5"/>
+  <rect x="8" y="20" width="16" height="1" fill="#b39ddb" opacity="0.5"/>
+  
+  <!-- 音乐符号装饰 -->
+  <g transform="translate(16, 10)">
+    <!-- 音符 -->
+    <ellipse cx="-3" cy="1" rx="1.5" ry="1" fill="#7e57c2"/>
+    <path d="M -3 1 L -3 6 L -1 6 L -1 2 Q -2 1 -3 1" fill="#7e57c2"/>
+    
+    <ellipse cx="3" cy="-1" rx="1.5" ry="1" fill="#7e57c2"/>
+    <path d="M 3 -1 L 3 4 L 5 4 L 5 0 Q 4 -1 3 -1" fill="#7e57c2"/>
+    
+    <!-- 连接线 -->
+    <path d="M -1 4 Q 1 3 3 2" stroke="#7e57c2" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- 小星星装饰 -->
+  <g transform="translate(10, 22)">
+    <path d="M 1 0 L 1.2 0.6 L 2 0.6 L 1.3 1 L 1.5 2 L 1 1.5 L 0.5 2 L 0.7 1 L 0 0.6 L 0.8 0.6 Z" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(20, 22)">
+    <path d="M 1 0 L 1.2 0.6 L 2 0.6 L 1.3 1 L 1.5 2 L 1 1.5 L 0.5 2 L 0.7 1 L 0 0.6 L 0.8 0.6 Z" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <!-- 旋转把手（简化版） -->
+  <circle cx="16" cy="8" r="1.5" fill="#7e57c2"/>
+  <rect x="15.5" y="5" width="1" height="3" fill="#7e57c2"/>
+</svg>

@@ -1,0 +1,326 @@
+/**
+ * Accessibility Styles
+ * WCAG 2.1 AA Compliance
+ */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Screen reader only content that becomes visible on focus */
+.sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: inherit !important;
+}
+
+/* Skip links for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Enhanced focus indicators */
+.focus-visible {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .focus-visible {
+    outline: 3px solid #000 !important;
+    outline-offset: 3px !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom focus styles for interactive elements */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Enhanced focus for buttons */
+button:focus-visible {
+  border-radius: 6px;
+}
+
+/* Enhanced focus for form inputs */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1), 0 0 0 1px #2563eb;
+}
+
+/* Focus for custom elements */
+.custom-focus:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Color contrast utilities */
+.text-contrast-primary {
+  color: #1f2937; /* Gray 800 */
+}
+
+.text-contrast-secondary {
+  color: #374151; /* Gray 700 */
+}
+
+.bg-contrast-primary {
+  background-color: #ffffff;
+}
+
+.bg-contrast-secondary {
+  background-color: #f9fafb; /* Gray 50 */
+}
+
+/* Ensure minimum contrast ratios */
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Disabled state with proper contrast */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ARIA live regions */
+[aria-live="polite"],
+[aria-live="assertive"] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Error states with high contrast */
+.error-state {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+.error-text {
+  color: #dc2626 !important;
+  font-weight: 500;
+}
+
+/* Success states with high contrast */
+.success-state {
+  border-color: #16a34a !important;
+  background-color: #f0fdf4 !important;
+}
+
+.success-text {
+  color: #16a34a !important;
+  font-weight: 500;
+}
+
+/* Warning states with high contrast */
+.warning-state {
+  border-color: #d97706 !important;
+  background-color: #fffbeb !important;
+}
+
+.warning-text {
+  color: #d97706 !important;
+  font-weight: 500;
+}
+
+/* Responsive text sizing for better readability */
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Print styles for accessibility */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  /* Ensure good contrast in print */
+  body {
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .text-contrast-primary {
+    color: #f9fafb; /* Gray 50 */
+  }
+  
+  .text-contrast-secondary {
+    color: #e5e7eb; /* Gray 200 */
+  }
+  
+  .bg-contrast-primary {
+    background-color: #1f2937; /* Gray 800 */
+  }
+  
+  .bg-contrast-secondary {
+    background-color: #374151; /* Gray 700 */
+  }
+  
+  /* Enhanced focus in dark mode */
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  a:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 2px solid #60a5fa; /* Blue 400 */
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2);
+  }
+}
+
+/* Custom scrollbar for better accessibility */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Ensure minimum touch target sizes for mobile */
+@media (pointer: coarse) {
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="link"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .touch-target {
+    padding: 12px;
+    margin: -4px;
+  }
+}
+
+/* Voice activation support */
+[vocab]:focus {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+}
+
+/* Reading order utilities */
+.reading-order-1 { order: 1; }
+.reading-order-2 { order: 2; }
+.reading-order-3 { order: 3; }
+.reading-order-4 { order: 4; }
+
+/* Logical reading order for screen readers */
+.logical-order {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure text remains selectable */
+.user-select-text {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Prevent text overflow */
+.text-wrap-balance {
+  text-wrap: balance;
+}
+
+/* Ensure proper line height for readability */
+.readable-line-height {
+  line-height: 1.5;
+}
+
+/* Custom focus ring for specific components */
+.garden-plot:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.1);
+}
+
+.weather-effect:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.plant-renderer:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+  border-radius: 8px;
+}

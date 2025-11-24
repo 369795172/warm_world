@@ -1,0 +1,473 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2025-11-22T14:00:00Z",
+  "description": "Asset manifest for 价值之旅 · 小小世界 UI upgrade project",
+  "categories": {
+    "characters": {
+      "description": "Character assets for interactive elements",
+      "assets": [
+        {
+          "id": "bunny",
+          "name": "小兔兔",
+          "type": "svg",
+          "category": "characters",
+          "src": "/assets/characters/bunny.svg",
+          "alt": "可爱的小兔兔角色",
+          "dimensions": { "width": 64, "height": 64 },
+          "fileSize": 2048,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["character", "animal", "cute", "friendly"],
+          "fallback": "bunny_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "bear",
+          "name": "小熊熊",
+          "type": "svg",
+          "category": "characters",
+          "src": "/assets/characters/bear.svg",
+          "alt": "友好的小熊熊角色",
+          "dimensions": { "width": 64, "height": 64 },
+          "fileSize": 2560,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["character", "animal", "cute", "playful"],
+          "fallback": "bear_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "parent_mom",
+          "name": "妈妈",
+          "type": "svg",
+          "category": "characters",
+          "src": "/assets/characters/parent_mom.svg",
+          "alt": "温柔的妈妈角色",
+          "dimensions": { "width": 64, "height": 64 },
+          "fileSize": 3072,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["character", "parent", "caring", "helpful"],
+          "fallback": "parent_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "parent_dad",
+          "name": "爸爸",
+          "type": "svg",
+          "category": "characters",
+          "src": "/assets/characters/parent_dad.svg",
+          "alt": "友善的爸爸角色",
+          "dimensions": { "width": 64, "height": 64 },
+          "fileSize": 3072,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["character", "parent", "supportive", "helpful"],
+          "fallback": "parent_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        }
+      ]
+    },
+    "toys": {
+      "description": "Toy assets for interactive gameplay",
+      "assets": [
+        {
+          "id": "ball",
+          "name": "小球",
+          "type": "svg",
+          "category": "toys",
+          "src": "/assets/toys/ball.svg",
+          "alt": "彩色玩具球",
+          "dimensions": { "width": 32, "height": 32 },
+          "fileSize": 1024,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["toy", "play", "colorful", "bounce"],
+          "fallback": "ball_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "music_box",
+          "name": "音乐盒",
+          "type": "svg",
+          "category": "toys",
+          "src": "/assets/toys/music_box.svg",
+          "alt": "精美的音乐盒",
+          "dimensions": { "width": 32, "height": 32 },
+          "fileSize": 1536,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["toy", "music", "elegant", "melody"],
+          "fallback": "music_box_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "gift",
+          "name": "礼物",
+          "type": "svg",
+          "category": "toys",
+          "src": "/assets/toys/gift.svg",
+          "alt": "漂亮的礼物盒",
+          "dimensions": { "width": 32, "height": 32 },
+          "fileSize": 1280,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["toy", "present", "surprise", "sharing"],
+          "fallback": "gift_emoji",
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        }
+      ]
+    },
+    "backgrounds": {
+      "description": "Background assets for scene environments",
+      "assets": [
+        {
+          "id": "home_room_bg",
+          "name": "房间背景",
+          "type": "svg",
+          "category": "backgrounds",
+          "src": "/assets/backgrounds/home_room_bg.svg",
+          "alt": "温馨的房间背景",
+          "dimensions": { "width": 800, "height": 600 },
+          "fileSize": 8192,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["background", "room", "home", "cozy"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "garden_sky_bg",
+          "name": "花园天空背景",
+          "type": "svg",
+          "category": "backgrounds",
+          "src": "/assets/backgrounds/garden_sky_bg.svg",
+          "alt": "花园天空背景",
+          "dimensions": { "width": 800, "height": 600 },
+          "fileSize": 10240,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["background", "garden", "sky", "nature"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "town_view_bg",
+          "name": "小镇背景",
+          "type": "svg",
+          "category": "backgrounds",
+          "src": "/assets/backgrounds/town_view_bg.svg",
+          "alt": "小镇全景背景",
+          "dimensions": { "width": 1200, "height": 800 },
+          "fileSize": 15360,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["background", "town", "panorama", "exploration"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        }
+      ]
+    },
+    "animations": {
+      "description": "Animation assets for interactive effects",
+      "assets": [
+        {
+          "id": "bounce_anim",
+          "name": "弹跳动画",
+          "type": "lottie",
+          "category": "animations",
+          "src": "/assets/animations/bounce_anim.json",
+          "alt": "弹跳动画效果",
+          "fileSize": 5120,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["animation", "bounce", "playful", "interaction"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "grow_anim",
+          "name": "生长动画",
+          "type": "lottie",
+          "category": "animations",
+          "src": "/assets/animations/grow_anim.json",
+          "alt": "植物生长动画",
+          "fileSize": 6144,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["animation", "grow", "plant", "nature"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "sparkle_anim",
+          "name": "闪光动画",
+          "type": "lottie",
+          "category": "animations",
+          "src": "/assets/animations/sparkle_anim.json",
+          "alt": "闪光特效动画",
+          "fileSize": 4096,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["animation", "sparkle", "effect", "magical"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        }
+      ]
+    },
+    "icons": {
+      "description": "Icon assets for UI elements",
+      "assets": [
+        {
+          "id": "water_icon",
+          "name": "水滴图标",
+          "type": "svg",
+          "category": "icons",
+          "src": "/assets/icons/water_icon.svg",
+          "alt": "水滴图标",
+          "dimensions": { "width": 24, "height": 24 },
+          "fileSize": 512,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["icon", "water", "garden", "care"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "share_icon",
+          "name": "分享图标",
+          "type": "svg",
+          "category": "icons",
+          "src": "/assets/icons/share_icon.svg",
+          "alt": "分享图标",
+          "dimensions": { "width": 24, "height": 24 },
+          "fileSize": 768,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["icon", "share", "social", "interaction"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        },
+        {
+          "id": "home_icon",
+          "name": "主页图标",
+          "type": "svg",
+          "category": "icons",
+          "src": "/assets/icons/home_icon.svg",
+          "alt": "主页图标",
+          "dimensions": { "width": 24, "height": 24 },
+          "fileSize": 640,
+          "version": "1.0.0",
+          "createdAt": "2025-11-22T00:00:00Z",
+          "updatedAt": "2025-11-22T00:00:00Z",
+          "tags": ["icon", "home", "navigation", "main"],
+          "validation": {
+            "status": "pending",
+            "checkedAt": null,
+            "errors": []
+          }
+        }
+      ]
+    }
+  },
+  "fallbackAssets": {
+    "description": "Emoji fallback assets for graceful degradation",
+    "assets": [
+      {
+        "id": "bunny_emoji",
+        "name": "小兔兔Emoji",
+        "type": "emoji",
+        "category": "characters",
+        "src": "🐰",
+        "alt": "小兔兔",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "character", "animal", "fallback"]
+      },
+      {
+        "id": "bear_emoji",
+        "name": "小熊熊Emoji",
+        "type": "emoji",
+        "category": "characters",
+        "src": "🐻",
+        "alt": "小熊熊",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "character", "animal", "fallback"]
+      },
+      {
+        "id": "parent_emoji",
+        "name": "父母Emoji",
+        "type": "emoji",
+        "category": "characters",
+        "src": "👨‍👩‍👧‍👦",
+        "alt": "爸爸妈妈",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "character", "parent", "fallback"]
+      },
+      {
+        "id": "ball_emoji",
+        "name": "小球Emoji",
+        "type": "emoji",
+        "category": "toys",
+        "src": "⚽",
+        "alt": "小球",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "toy", "play", "fallback"]
+      },
+      {
+        "id": "music_box_emoji",
+        "name": "音乐盒Emoji",
+        "type": "emoji",
+        "category": "toys",
+        "src": "🎵",
+        "alt": "音乐盒",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "toy", "music", "fallback"]
+      },
+      {
+        "id": "gift_emoji",
+        "name": "礼物Emoji",
+        "type": "emoji",
+        "category": "toys",
+        "src": "🎁",
+        "alt": "礼物",
+        "version": "1.0.0",
+        "createdAt": "2025-11-22T00:00:00Z",
+        "updatedAt": "2025-11-22T00:00:00Z",
+        "tags": ["emoji", "toy", "present", "fallback"]
+      }
+    ]
+  },
+  "metadata": {
+    "totalAssets": 15,
+    "totalFileSize": 73728,
+    "categoriesCount": 5,
+    "validationStatus": "pending",
+    "lastValidated": null,
+    "compliance": {
+      "namingConvention": "pending",
+      "accessibility": "pending",
+      "performance": "pending"
+    }
+  },
+  "configuration": {
+    "namingRules": {
+      "characters": "^[a-z]+(_[a-z]+)*$",
+      "toys": "^[a-z]+(_[a-z]+)*$",
+      "backgrounds": "^[a-z]+(_[a-z]+)*_bg$",
+      "animations": "^[a-z]+(_[a-z]+)*_anim$",
+      "icons": "^[a-z]+(_[a-z]+)*_icon$"
+    },
+    "validationRules": {
+      "svg": {
+        "maxFileSize": 51200,
+        "dimensions": { "min": 16, "max": 512 },
+        "requiredAttributes": ["viewBox", "xmlns"]
+      },
+      "lottie": {
+        "maxFileSize": 204800,
+        "requiredProperties": ["v", "fr", "ip", "op", "layers"]
+      },
+      "gltf": {
+        "maxFileSize": 512000,
+        "requiredExtensions": [".gltf", ".glb"]
+      }
+    },
+    "performanceConfig": {
+      "lazyLoad": true,
+      "preloadCritical": true,
+      "maxConcurrentLoads": 3,
+      "timeout": 10000,
+      "retryAttempts": 3,
+      "retryDelay": 1000
+    },
+    "accessibilityConfig": {
+      "supportsReducedMotion": true,
+      "highContrastMode": true,
+      "screenReaderCompatible": true,
+      "keyboardNavigation": true
+    }
+  },
+  "documentation": {
+    "purpose": "Asset manifest for UI upgrade project following universal assistant rules",
+    "structure": "Organized by categories with comprehensive metadata and validation",
+    "compliance": "Adheres to naming conventions and accessibility standards",
+    "maintenance": "Auto-generated and validated through build process"
+  }
+}

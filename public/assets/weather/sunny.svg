@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sunny weather effect with smiling sun -->
+  <defs>
+    <radialGradient id="sunGradient" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="70%" stop-color="#FFA500"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </radialGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="1">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Sun glow background -->
+  <circle cx="32" cy="32" r="28" fill="url(#sunGlow)"/>
+  
+  <!-- Main sun circle -->
+  <circle cx="32" cy="32" r="18" fill="url(#sunGradient)"/>
+  
+  <!-- Sun rays -->
+  <path d="M32 8 L32 2" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 62 L32 56" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M8 32 L2 32" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M62 32 L56 32" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M46 18 L50 14" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 46 L14 50" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M46 46 L50 50" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 18 L14 14" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Smiling face -->
+  <circle cx="27" cy="28" r="2" fill="#FF8C00"/>
+  <circle cx="37" cy="28" r="2" fill="#FF8C00"/>
+  <path d="M25 36 Q32 42 39 36" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" fill="none"/>
+  
+  <!-- Sun highlight -->
+  <circle cx="28" cy="28" r="3" fill="#FFFF00" opacity="0.6"/>
+</svg>

@@ -1,0 +1,59 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 妈妈角色设计 -->
+  <defs>
+    <radialGradient id="momSkinGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#ffdbac"/>
+      <stop offset="100%" stop-color="#f4c2a1"/>
+    </radialGradient>
+    <linearGradient id="momHairGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b4513"/>
+      <stop offset="100%" stop-color="#a0522d"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 身体 -->
+  <ellipse cx="32" cy="48" rx="16" ry="12" fill="#4a90e2" stroke="#357abd" stroke-width="1"/>
+  
+  <!-- 头部 -->
+  <circle cx="32" cy="24" r="14" fill="url(#momSkinGradient)" stroke="#e6b896" stroke-width="1"/>
+  
+  <!-- 头发 -->
+  <path d="M 18 20 Q 32 8 46 20 Q 48 28 44 32 Q 40 28 32 30 Q 24 28 20 32 Q 16 28 18 20" fill="url(#momHairGradient)" stroke="#654321" stroke-width="1"/>
+  
+  <!-- 头发细节 -->
+  <path d="M 20 18 Q 25 15 30 18" stroke="#8b4513" stroke-width="1" fill="none"/>
+  <path d="M 34 18 Q 39 15 44 18" stroke="#8b4513" stroke-width="1" fill="none"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="27" cy="22" r="2.5" fill="#333333"/>
+  <circle cx="37" cy="22" r="2.5" fill="#333333"/>
+  <circle cx="27.5" cy="21.5" r="0.8" fill="#ffffff"/>
+  <circle cx="37.5" cy="21.5" r="0.8" fill="#ffffff"/>
+  
+  <!-- 眉毛 -->
+  <path d="M 24 19 Q 27 17 30 19" stroke="#8b4513" stroke-width="1" fill="none"/>
+  <path d="M 34 19 Q 37 17 40 19" stroke="#8b4513" stroke-width="1" fill="none"/>
+  
+  <!-- 鼻子 -->
+  <ellipse cx="32" cy="26" rx="1.5" ry="1" fill="#e6b896"/>
+  
+  <!-- 温柔微笑 -->
+  <path d="M 28 28 Q 32 31 36 28" stroke="#d2691e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- 腮红 -->
+  <circle cx="22" cy="25" r="2.5" fill="#ffb3d9" opacity="0.3"/>
+  <circle cx="42" cy="25" r="2.5" fill="#ffb3d9" opacity="0.3"/>
+  
+  <!-- 手臂 -->
+  <ellipse cx="20" cy="40" rx="3" ry="8" fill="url(#momSkinGradient)" stroke="#e6b896" stroke-width="1" transform="rotate(-20 20 40)"/>
+  <ellipse cx="44" cy="40" rx="3" ry="8" fill="url(#momSkinGradient)" stroke="#e6b896" stroke-width="1" transform="rotate(20 44 40)"/>
+  
+  <!-- 手 -->
+  <circle cx="18" cy="46" r="2.5" fill="url(#momSkinGradient)" stroke="#e6b896" stroke-width="1"/>
+  <circle cx="46" cy="46" r="2.5" fill="url(#momSkinGradient)" stroke="#e6b896" stroke-width="1"/>
+  
+  <!-- 爱心装饰（象征母爱） -->
+  <g transform="translate(32, 38)">
+    <path d="M 0 4 C -2 0 -6 0 -6 4 C -6 8 0 12 0 12 C 0 12 6 8 6 4 C 6 0 2 0 0 4" fill="#ff6b6b" opacity="0.8"/>
+  </g>
+</svg>

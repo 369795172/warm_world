@@ -1,0 +1,489 @@
+/* Enhanced Accessibility Styles
+ * Based on WCAG 2.1 AA standards and UI motion plan requirements
+ */
+
+/* CSS Custom Properties for Accessibility */
+:root {
+  /* Color contrast ratios (WCAG 2.1 AA compliant) */
+  --color-contrast-normal: 4.5;
+  --color-contrast-large: 3;
+  --color-contrast-enhanced: 7;
+  
+  /* High contrast mode colors */
+  --hc-text-primary: #000000;
+  --hc-text-secondary: #333333;
+  --hc-background: #ffffff;
+  --hc-border: #000000;
+  --hc-interactive: #0066cc;
+  --hc-focus: #ff6600;
+  
+  /* Color blind friendly palette */
+  --cb-safe-red: #d32f2f;
+  --cb-safe-green: #388e3c;
+  --cb-safe-blue: #1976d2;
+  --cb-safe-yellow: #f57c00;
+  --cb-safe-purple: #7b1fa2;
+  
+  /* Animation duration variables */
+  --animation-duration-fast: 100ms;
+  --animation-duration-normal: 200ms;
+  --animation-duration-slow: 300ms;
+  --animation-duration-complex: 500ms;
+  
+  /* Easing functions */
+  --animation-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --animation-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  
+  /* Focus indicators */
+  --focus-ring-width: 3px;
+  --focus-ring-color: #0066cc;
+  --focus-ring-offset: 2px;
+  
+  /* Touch targets (minimum 44x44px) */
+  --touch-target-min: 44px;
+  --touch-target-preferred: 48px;
+  
+  /* Text sizing */
+  --font-size-scale: 1;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --letter-spacing-base: 0.01em;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-contrast-normal: 7;
+    --color-contrast-large: 4.5;
+    --color-contrast-enhanced: 10;
+  }
+  
+  .high-contrast {
+    --tw-text-opacity: 1;
+    --tw-bg-opacity: 1;
+    color: var(--hc-text-primary) !important;
+    background-color: var(--hc-background) !important;
+    border-color: var(--hc-border) !important;
+  }
+  
+  .high-contrast .bg-white {
+    background-color: var(--hc-background) !important;
+  }
+  
+  .high-contrast .text-gray-600,
+  .high-contrast .text-gray-700,
+  .high-contrast .text-gray-800,
+  .high-contrast .text-gray-900 {
+    color: var(--hc-text-primary) !important;
+  }
+  
+  .high-contrast .border-gray-200,
+  .high-contrast .border-gray-300 {
+    border-color: var(--hc-border) !important;
+  }
+  
+  .high-contrast button,
+  .high-contrast .btn {
+    border: 2px solid var(--hc-border) !important;
+    background-color: var(--hc-background) !important;
+    color: var(--hc-text-primary) !important;
+  }
+  
+  .high-contrast button:hover,
+  .high-contrast .btn:hover {
+    background-color: var(--hc-text-secondary) !important;
+    color: var(--hc-background) !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --animation-duration-fast: 0ms;
+    --animation-duration-normal: 0ms;
+    --animation-duration-slow: 0ms;
+    --animation-duration-complex: 0ms;
+  }
+  
+  .reduced-motion,
+  .reduced-motion * {
+    animation-duration: 0.1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reduced-motion [data-animating="true"] {
+    display: none !important;
+  }
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: calc(var(--font-size-base) * var(--font-size-scale, 1.25));
+  line-height: calc(var(--line-height-base) * 1.1);
+  letter-spacing: calc(var(--letter-spacing-base) * 1.2);
+}
+
+.large-text .text-xs { font-size: calc(0.75rem * var(--font-size-scale, 1.25)); }
+.large-text .text-sm { font-size: calc(0.875rem * var(--font-size-scale, 1.25)); }
+.large-text .text-base { font-size: calc(1rem * var(--font-size-scale, 1.25)); }
+.large-text .text-lg { font-size: calc(1.125rem * var(--font-size-scale, 1.25)); }
+.large-text .text-xl { font-size: calc(1.25rem * var(--font-size-scale, 1.25)); }
+.large-text .text-2xl { font-size: calc(1.5rem * var(--font-size-scale, 1.25)); }
+
+/* Color Blind Support */
+.color-blind-protanopia {
+  filter: url('#protanopia');
+}
+
+.color-blind-deuteranopia {
+  filter: url('#deuteranopia');
+}
+
+.color-blind-tritanopia {
+  filter: url('#tritanopia');
+}
+
+/* Enhanced Focus Indicators */
+*:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  box-shadow: 0 0 0 var(--focus-ring-offset) rgba(0, 102, 204, 0.1);
+}
+
+.high-contrast *:focus-visible {
+  outline-color: var(--hc-focus);
+  outline-width: 4px;
+}
+
+/* Interactive Elements */
+button:focus-visible,
+.btn:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Touch Target Enhancement */
+button,
+.btn,
+[role="button"],
+a,
+input,
+select,
+textarea {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  position: relative;
+}
+
+/* Expand touch targets for better accessibility */
+button::before,
+.btn::before,
+[role="button"]::before,
+a::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+}
+
+/* Enhanced Color Contrast */
+.text-contrast-safe {
+  color: var(--hc-text-primary);
+  background-color: var(--hc-background);
+  border-color: var(--hc-border);
+}
+
+/* Interactive Element States */
+.interactive-element {
+  transition: all var(--animation-duration-normal) var(--animation-easing-standard);
+}
+
+.interactive-element:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-element:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* High contrast interactive states */
+.high-contrast .interactive-element:hover {
+  background-color: var(--hc-text-secondary);
+  color: var(--hc-background);
+}
+
+/* Animation Performance Classes */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animation-optimized {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Reduced motion for specific elements */
+.reduced-motion .parallax-effect,
+.reduced-motion .complex-animation,
+.reduced-motion .particle-effect {
+  display: none !important;
+}
+
+/* Accessibility Notifications */
+.accessibility-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all var(--animation-duration-normal) var(--animation-easing-standard);
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.accessibility-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+  transition: top var(--animation-duration-normal) var(--animation-easing-standard);
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Enhanced Form Elements */
+.form-element {
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px; /* Prevent zoom on iOS */
+  line-height: 1.5;
+  transition: all var(--animation-duration-normal) var(--animation-easing-standard);
+}
+
+.form-element:focus {
+  border-color: var(--focus-ring-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.form-element:invalid {
+  border-color: #dc2626;
+}
+
+.form-element:invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Color Blind Friendly Classes */
+.color-safe-red {
+  color: var(--cb-safe-red);
+}
+
+.color-safe-green {
+  color: var(--cb-safe-green);
+}
+
+.color-safe-blue {
+  color: var(--cb-safe-blue);
+}
+
+.color-safe-yellow {
+  color: var(--cb-safe-yellow);
+}
+
+.color-safe-purple {
+  color: var(--cb-safe-purple);
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-success {
+  background-color: rgba(56, 142, 60, 0.1);
+  color: var(--cb-safe-green);
+  border: 1px solid var(--cb-safe-green);
+}
+
+.status-warning {
+  background-color: rgba(245, 124, 0, 0.1);
+  color: var(--cb-safe-yellow);
+  border: 1px solid var(--cb-safe-yellow);
+}
+
+.status-error {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: var(--cb-safe-red);
+  border: 1px solid var(--cb-safe-red);
+}
+
+.status-info {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: var(--cb-safe-blue);
+  border: 1px solid var(--cb-safe-blue);
+}
+
+/* Performance Optimization Classes */
+.performance-excellent {
+  --animation-duration-fast: 100ms;
+  --animation-duration-normal: 200ms;
+  --animation-duration-slow: 300ms;
+}
+
+.performance-good {
+  --animation-duration-fast: 80ms;
+  --animation-duration-normal: 160ms;
+  --animation-duration-slow: 240ms;
+}
+
+.performance-fair {
+  --animation-duration-fast: 60ms;
+  --animation-duration-normal: 120ms;
+  --animation-duration-slow: 180ms;
+}
+
+.performance-poor {
+  --animation-duration-fast: 0ms;
+  --animation-duration-normal: 0ms;
+  --animation-duration-slow: 0ms;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Reduced Motion Print */
+@media print, (prefers-reduced-motion: reduce) {
+  .animation-complex,
+  .particle-effect,
+  .parallax-effect {
+    display: none !important;
+  }
+}
+
+/* Utility Classes */
+.contrast-check {
+  position: relative;
+}
+
+.contrast-check::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 49%, #000 49%, #000 51%, transparent 51%);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Responsive Accessibility */
+@media (max-width: 640px) {
+  .touch-target-enhanced {
+    min-height: calc(var(--touch-target-min) * 1.2);
+    min-width: calc(var(--touch-target-min) * 1.2);
+  }
+  
+  .mobile-text-large {
+    font-size: calc(1rem * var(--font-size-scale, 1.1));
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hc-text-primary: #ffffff;
+    --hc-text-secondary: #cccccc;
+    --hc-background: #000000;
+    --hc-border: #ffffff;
+    --hc-focus: #ff9900;
+  }
+  
+  .dark-mode-enhanced {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  
+  .dark-mode-enhanced img,
+  .dark-mode-enhanced video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+/* High Contrast Dark Mode */
+@media (prefers-contrast: high) and (prefers-color-scheme: dark) {
+  :root {
+    --hc-text-primary: #ffffff;
+    --hc-background: #000000;
+    --hc-border: #ffffff;
+  }
+}

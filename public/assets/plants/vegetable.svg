@@ -1,0 +1,48 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fresh vegetable (carrot with leaves) -->
+  <defs>
+    <linearGradient id="carrotBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6347"/>
+      <stop offset="50%" stop-color="#FF8C00"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <radialGradient id="carrotHighlight" cx="0.3" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FFE4B5" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFE4B5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="carrotLeaves" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ADFF2F"/>
+      <stop offset="50%" stop-color="#32CD32"/>
+      <stop offset="100%" stop-color="#228B22"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Carrot body -->
+  <path d="M16 25 Q14 20 14 15 Q14 10 16 8 Q18 10 18 15 Q18 20 16 25" fill="url(#carrotBody)"/>
+  <path d="M16 25 Q14 20 14 15 Q14 10 16 8 Q18 10 18 15 Q18 20 16 25" fill="url(#carrotHighlight)" opacity="0.5"/>
+  
+  <!-- Carrot texture lines -->
+  <line x1="15" y1="22" x2="15" y2="10" stroke="#FF7F50" stroke-width="0.5" opacity="0.7"/>
+  <line x1="17" y1="22" x2="17" y2="10" stroke="#FF7F50" stroke-width="0.5" opacity="0.7"/>
+  <line x1="15.5" y1="18" x2="15.5" y2="12" stroke="#FF6347" stroke-width="0.3" opacity="0.6"/>
+  <line x1="16.5" y1="18" x2="16.5" y2="12" stroke="#FF6347" stroke-width="0.3" opacity="0.6"/>
+  
+  <!-- Carrot leaves (top) -->
+  <path d="M16 8 Q13 6 11 4 Q13 2 16 3" stroke="url(#carrotLeaves)" stroke-width="2" fill="none"/>
+  <path d="M16 8 Q19 6 21 4 Q19 2 16 3" stroke="url(#carrotLeaves)" stroke-width="2" fill="none"/>
+  <path d="M16 8 Q15 5 14 3 Q15 1 16 2" stroke="url(#carrotLeaves)" stroke-width="1.5" fill="none"/>
+  <path d="M16 8 Q17 5 18 3 Q17 1 16 2" stroke="url(#carrotLeaves)" stroke-width="1.5" fill="none"/>
+  
+  <!-- Leaf details -->
+  <path d="M13 6 Q12 5 11 4" stroke="#228B22" stroke-width="0.5" opacity="0.7" fill="none"/>
+  <path d="M19 6 Q20 5 21 4" stroke="#228B22" stroke-width="0.5" opacity="0.7" fill="none"/>
+  
+  <!-- Small root hairs -->
+  <path d="M16 25 Q15 26 14 25" stroke="#FF8C00" stroke-width="0.5" opacity="0.6" fill="none"/>
+  <path d="M16 25 Q17 26 18 25" stroke="#FF8C00" stroke-width="0.5" opacity="0.6" fill="none"/>
+  <path d="M16 23 Q15 24 14 23" stroke="#FF8C00" stroke-width="0.4" opacity="0.5" fill="none"/>
+  <path d="M16 23 Q17 24 18 23" stroke="#FF8C00" stroke-width="0.4" opacity="0.5" fill="none"/>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="16" cy="25" rx="3" ry="1" fill="#000000" opacity="0.15"/>
+</svg>

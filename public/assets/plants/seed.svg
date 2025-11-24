@@ -1,0 +1,26 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seed with gradient and highlight -->
+  <defs>
+    <radialGradient id="seedGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#8B4513"/>
+      <stop offset="70%" stop-color="#654321"/>
+      <stop offset="100%" stop-color="#3E2723"/>
+    </radialGradient>
+    <radialGradient id="highlight" cx="0.4" cy="0.4" r="0.3">
+      <stop offset="0%" stop-color="#D2691E" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#D2691E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main seed body -->
+  <ellipse cx="8" cy="10" rx="4" ry="3" fill="url(#seedGradient)"/>
+  <ellipse cx="8" cy="10" rx="2" ry="1.5" fill="url(#highlight)"/>
+  
+  <!-- Seed texture dots -->
+  <circle cx="6" cy="9" r="0.5" fill="#3E2723" opacity="0.6"/>
+  <circle cx="9" cy="11" r="0.3" fill="#3E2723" opacity="0.4"/>
+  <circle cx="7" cy="11.5" r="0.4" fill="#3E2723" opacity="0.5"/>
+  
+  <!-- Small shadow -->
+  <ellipse cx="8" cy="13.5" rx="3" ry="0.5" fill="#000000" opacity="0.2"/>
+</svg>

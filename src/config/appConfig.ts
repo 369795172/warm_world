@@ -50,6 +50,10 @@ export interface AppConfig {
     colorScheme: ColorScheme
     animationEnabled: boolean
     particleEffects: boolean
+    assetType: 'emoji' | 'svg' | 'lottie' | 'gltf'
+    assetQuality: 'low' | 'medium' | 'high'
+    prefersReducedMotion: boolean
+    highContrastMode: boolean
   }
 }
 
@@ -476,7 +480,11 @@ export const defaultConfig: AppConfig = {
       error: '#ef4444'
     },
     animationEnabled: true,
-    particleEffects: true
+    particleEffects: true,
+    assetType: 'emoji', // Start with emoji for compatibility
+    assetQuality: 'medium',
+    prefersReducedMotion: false,
+    highContrastMode: false
   }
 }
 
@@ -536,6 +544,60 @@ class ConfigManager {
 
   getToyById(id: string): ToyConfig | undefined {
     return this.config.scenes.home.toys.find(toy => toy.id === id)
+  }
+
+  // Asset management methods
+  getAssetType(): 'emoji' | 'svg' | 'lottie' | 'gltf' {
+    return this.config.visual.assetType
+  }
+
+  setAssetType(type: 'emoji' | 'svg' | 'lottie' | 'gltf') {
+    this.updateConfig({
+      visual: { ...this.config.visual, assetType: type }
+    })
+  }
+
+  getAssetQuality(): 'low' | 'medium' | 'high' {
+    return this.config.visual.assetQuality
+  }
+
+  setAssetQuality(quality: 'low' | 'medium' | 'high') {
+    this.updateConfig({
+      visual: { ...this.config.visual, assetQuality: quality }
+    })
+  }
+
+  getAccessibilityPreferences() {
+    return {
+      prefersReducedMotion: this.config.visual.prefersReducedMotion,
+      highContrastMode: this.config.visual.highContrastMode,
+      animationEnabled: this.config.visual.animationEnabled
+    }
+  }
+
+  setAccessibilityPreferences(preferences: {
+    prefersReducedMotion?: boolean
+    highContrastMode?: boolean
+    animationEnabled?: boolean
+  }) {
+    this.updateConfig({
+      visual: { 
+        ...this.config.visual, 
+        ...preferences
+      }
+    })
+  }
+
+  // Performance optimization methods
+  isPerformanceModeEnabled(): boolean {
+    return this.config.visual.assetQuality === 'low' || 
+           this.config.visual.prefersReducedMotion ||
+           !this.config.visual.animationEnabled
+  }
+
+  shouldUseFallbackAssets(): boolean {
+    return this.config.visual.assetType === 'emoji' || 
+           this.isPerformanceModeEnabled()
   }
 }
 
